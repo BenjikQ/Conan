@@ -1,0 +1,12 @@
+[settings]
+os={{ platform.system() }}
+arch=x86_64
+compiler=gcc
+compiler.version={{ os.getenv("COMPILER_VERSION") }}
+compiler.libcxx=libstdc++11
+compiler.cppstd=20
+build_type={{ os.getenv("BUILD_TYPE") }}
+
+[buildenv]
+CC=gcc
+CXX=g++

@@ -1,0 +1,15 @@
+[settings]
+os={{ platform.system() }}
+arch=x86_64
+compiler=clang
+compiler.version={{ os.getenv("COMPILER_VERSION") }}
+compiler.libcxx=libc++
+compiler.cppstd=20
+compiler.runtime=dynamic
+compiler.runtime_type={{ os.getenv("BUILD_TYPE") }}
+compiler.runtime_version=v143
+build_type={{ os.getenv("BUILD_TYPE") }}
+
+[buildenv]
+CC=clang
+CXX=clang++

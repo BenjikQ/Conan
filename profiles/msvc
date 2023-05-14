@@ -1,0 +1,9 @@
+[settings]
+os={{ platform.system() }}
+arch=x86_64
+compiler=msvc
+compiler.version=193
+compiler.runtime=dynamic
+compiler.runtime_type={{ os.getenv("BUILD_TYPE") }}
+compiler.cppstd=20
+build_type={{ os.getenv("BUILD_TYPE") }}
